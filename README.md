@@ -1,7 +1,7 @@
 ### Usage
 
 ## 
-- Execute "npm i" in console to install dependencies
+- Execute "npm i" in console to install dependencies.
 - Execute "node app.js" to interact with the app.
 
 
