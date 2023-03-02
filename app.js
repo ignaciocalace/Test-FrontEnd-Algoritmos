@@ -3,7 +3,7 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
-// Parte 1
+// Part 1
 function onlyLetters(arr) {
   let newArr = [];
   arr.forEach((e) => {
@@ -36,7 +36,7 @@ function maxNumber(arr) {
   return null;
 }
 
-// Parte 2
+// Part 2
 
 function findVar(arr, toFind) {
   for (let i = 0; i < arr.length; i++) {
@@ -45,7 +45,7 @@ function findVar(arr, toFind) {
   return false;
 }
 
-// Parte 3
+// Part 3
 
 function generateId() {
   let id = "";
