@@ -1,5 +1,9 @@
-// Parte 1
+const readline = require("readline").createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
+// Parte 1
 function onlyLetters(arr) {
   let newArr = [];
   arr.forEach((e) => {
@@ -61,3 +65,50 @@ function generateId() {
   }
   return id;
 }
+
+arr1 = ["a", 10, "b", "hola", 122, 15];
+arr2 = [1, 11, "a", "b", 123];
+
+readline.question(
+  "Choose the function you want to test:\n" +
+    "type 1 for: onlyLetters\n" +
+    "type 2 for: onlyNumbers\n" +
+    "type 3 for: maxNumber\n" +
+    "type 4 for: findVar\n" +
+    "type 5 for: generateId\n" +
+    "Select option: ",
+  (opt) => {
+    switch (opt) {
+      case "1": {
+        const res = onlyLetters(arr1);
+        console.log(`Finding only letters in ${arr1} \n 
+        Result is: ${res}`);
+        break;
+      }
+      case "2": {
+        const res = onlyNumbers(arr1);
+        console.log(`Finding only numbers in ${arr1} \n 
+        Result is: ${res}`);
+        break;
+      }
+      case "3": {
+        const res = maxNumber(arr1, 10);
+        console.log(`Finding max number in ${arr1} \n 
+        Result is: ${res}`);
+        break;
+      }
+      case "4": {
+        const res = findVar(arr2);
+        console.log(`Finding max number in ${arr2} \n 
+        Result is: ${res}`);
+        break;
+      }
+      case "5": {
+        const id = generateId();
+        console.log(`Your unique id is: ${id}`);
+        break;
+      }
+    }
+    readline.close();
+  }
+);
